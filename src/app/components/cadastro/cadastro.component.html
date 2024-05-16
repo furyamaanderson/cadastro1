@@ -1,0 +1,136 @@
+<!-- container formulário -->
+<main>
+    <!-- Formulário -->
+    <form class="form" [formGroup]="form" (ngSubmit)="cadastrar()">
+        <h2>Cadastro</h2>
+        <!-- Nome, codigo -->
+        <div class="principal1">
+            <label for="code" class="code">Código do produto</label>
+            <label for="name" class="name">Nome do produto</label>
+            <label for="internal_code" class="internal_code">Código interno</label>
+        </div>
+        <!-- Inputs nome, código -->
+        <div class="principal">
+            <input [formControl]="codigo" type="text" name="code" id="code"
+                [placeholder]="codigo.invalid && codigo.touched ? 'Código inválido' : 'Código do produto'"
+                [style.border-color]="codigo.invalid && codigo.touched ? 'red' : ''"
+                [ngClass]="{'invalid-touched': codigo.invalid && codigo.touched}">
+
+            <input [formControl]="nome" type="text" name="name" id="name"
+                [placeholder]="nome.invalid && nome.touched ? 'Nome inválido' : 'Nome do produto'"
+                [style.border-color]="nome.invalid && nome.touched ? 'red' : ''"
+                [ngClass]="{'invalid-touched': nome.invalid && nome.touched}">
+
+            <input [formControl]="codigoReduzido" type="text" name="internal_code" id="internal_code"
+                [placeholder]="codigoReduzido.invalid && codigoReduzido.touched ? 'Código interno inválido' : 'Código interno'"
+                [style.border-color]="codigoReduzido.invalid && codigoReduzido.touched ? 'red' : ''"
+                [ngClass]="{'invalid-touched': codigoReduzido.invalid && codigoReduzido.touched}">
+        </div>
+        <!-- Grupos, marca, departamento -->
+        <div class="agrupamento1">
+            <label for="departament" class="departament" >Departamentos</label>
+            <label for="brand" class="brand" >Marca</label>
+            <label for="group" class="group" >Grupo</label>
+            <label for="subgroup" class="subgroup" >SubGrupo</label>
+        </div>
+        <!-- Select agrupamento -->
+        <div class="agrupamento">
+            <select id="departament" name="departament">
+                <option value="Mercearia básica">Mercearia básica</option>
+                <option value="Mercearia salgada">Mercearia salgada</option>
+                <option value="Mercearia doce">Mercearia doce</option>
+                <option value="Higiene e limpeza">Higiene e limpeza</option>
+                <option value="Frios e laticíneos">Frios e laticíneos</option>
+                <option value="Padaria">Padaria</option>
+                <option value="Açougue">Açougue</option>
+                <option value="congelados">congelados</option>
+                <option value="Bebidas">Bebidas</option>
+                <option value="Enlatados">Enlatados</option>
+                <option value="Saudáveis">Saudáveis</option>
+            </select>
+            <!-- inputs marca, grupo, subgrupo -->
+            <input [formControl]="marca" type="text" name="brand" id="brand"
+                [placeholder]="marca.invalid && marca.touched ? 'Marca inválida' : 'Marca'"
+                [style.border-color]="marca.invalid && marca.touched ? 'red' : ''"
+                [ngClass]="{'invalid-touched': marca.invalid && marca.touched}">
+
+            <input [formControl]="grupo" type="text" name="group" id="group"
+                [placeholder]="grupo.invalid && grupo.touched ? 'Grupo inválido' : 'Grupo'"
+                [style.border-color]="grupo.invalid && grupo.touched ? 'red' : ''"
+                [ngClass]="{'invalid-touched': grupo.invalid && grupo.touched}">
+
+            <input [formControl]="subgrupo" type="text" name="subgroup" id="subgroup"
+                [placeholder]="subgrupo.invalid && subgrupo.touched ? 'SubGrupo inválido' : 'SubGrupo'"
+                [style.border-color]="subgrupo.invalid && subgrupo.touched ? 'red' : ''"
+                [ngClass]="{'invalid-touched': subgrupo.invalid && subgrupo.touched}">
+        </div>
+        <!-- Custos e preços -->
+        <div class="preco1">
+            <label for="cost_price" class="cost_price">Preço de custo</label>
+            <label for="wholesale_price" class="wholesale_price" >Preço de Venda Atacado</label>
+            <label for="retail_price" class="retail_price" >Preço de Venda Varejo</label>
+            <label for="fat1" class="fat1" >Fat. Atacado</label>
+            <label for="fat2" class="fat2" >Fat. Varejo</label>
+        </div>
+        <!-- inputs preços, custos -->
+        <div class="preco">
+
+            <input [formControl]="custo" type="text" name="cost_price" id="cost_price"
+                [placeholder]="custo.invalid && custo.touched ? 'Preço de custo inválido' : 'Preço de custo'"
+                [style.border-color]="custo.invalid && custo.touched ? 'red' : ''"
+                [ngClass]="{'invalid-touched': custo.invalid && custo.touched}">
+
+            <input [formControl]="atacado" type="text" name="wholesale_price" id="wholesale_price"
+                [placeholder]="atacado.invalid && atacado.touched ? 'Preço de Venda Atacado inválido' : 'Preço de Venda Atacado'"
+                [style.border-color]="atacado.invalid && atacado.touched ? 'red' : ''"
+                [ngClass]="{'invalid-touched': atacado.invalid && atacado.touched}">
+
+            <input [formControl]="varejo" type="text" name="retail_price" id="retail_price"
+                [placeholder]="varejo.invalid && varejo.touched ? 'Preço de Venda Varejo inválido' : 'Preço de Venda Varejo'"
+                [style.border-color]="varejo.invalid && varejo.touched ? 'red' : ''"
+                [ngClass]="{'invalid-touched': varejo.invalid && varejo.touched}">
+                <!-- Interpolação do resultado automático -->
+            <div class="faturamento">
+                <h2>R${{ resultado }},00</h2>
+            </div>
+            <div class="faturamento">
+                <h2>R${{ resultado2 }},00</h2>
+            </div>
+        </div>
+        <!-- Estoques -->
+        <div class="estoque1">
+            <label for="type_stock" class="type_stock">Código do estoque</label>
+            <label for="available_stock" class="available_stock">Estoque disponível</label>
+            <label for="minimum_stock" class="minimum_stock">Estoque Mínimo</label>
+            <label for="maximum_stock" class="maximum_stock">Estoque Máximo</label>
+        </div>
+        <div class="estoque">
+            <select id="type_stock" name="departament">
+                <option value="revenda">1#Revenda</option>
+                <option value="consumo">2#Consumo</option>
+                <option value="insumo">3#Insumo</option>
+                <option value="Trocas">4#Trocas</option>
+                <option value="cesta básica">5#Cesta básica</option>
+            </select>
+            <!-- inputs estoque -->
+            <input type="text" [formControl]="estoqueDisponivel" name="available_stock" id="available_stock"
+                [placeholder]="estoqueDisponivel.invalid && estoqueDisponivel.touched ? 'Estoque inválido' : 'Estoque Disponível'"
+                [style.border-color]="estoqueDisponivel.invalid && estoqueDisponivel.touched ? 'red' : ''"
+                [ngClass]="{'invalid-touched': estoqueDisponivel.invalid && estoqueDisponivel.touched}">
+
+            <input type="text" [formControl]="estoqueMinimo" name="minimum_stock" id="minimum_stock"
+                [placeholder]="estoqueMinimo.invalid && estoqueMinimo.touched ? 'Estoque Mínimo inválido' : 'Estoque Mínimo'"
+                [style.border-color]="estoqueMinimo.invalid && estoqueMinimo.touched ? 'red' : ''"
+                [ngClass]="{'invalid-touched': estoqueMinimo.invalid && estoqueMinimo.touched}">
+
+            <input type="text" [formControl]="estoqueMaximo" name="maximum_stock" id="maximum_stock"
+                [placeholder]="estoqueMaximo.invalid && estoqueMaximo.touched ? 'Estoque Máximo inválido' : 'Estoque Máximo'"
+                [style.border-color]="estoqueMaximo.invalid && estoqueMaximo.touched ? 'red' : ''"
+                [ngClass]="{'invalid-touched': estoqueMaximo.invalid && estoqueMaximo.touched}">
+        </div>
+        <!-- Botão de cadastro função submit -->
+        <div class="botao">
+            <button type="submit">Cadastrar produto</button>
+        </div>
+    </form>
+</main>

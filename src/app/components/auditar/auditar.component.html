@@ -1,0 +1,98 @@
+<main class="main">
+    <form class="form" [formGroup]="form" (ngSubmit)="auditar()">
+        <h2>Auditar Estoque</h2>
+        <div class="container">
+            <div class="principal">
+                <label for="code">Código do produto</label>
+                <label for="name">Nome do produto</label>
+                <label for="type_stock">Cód.</label>
+                <label for="quantity">Quant.</label>
+                <label for="math">Acumular?</label>
+            </div>
+            <div class="principal">
+
+                <input [formControl]="code" 
+                type="text" 
+                name="code" 
+                id="code" 
+                [placeholder]="code.invalid && code.touched ? 'Código inválido' : 'Código do produto'"
+                [style.border-color]="code.invalid && code.touched ? 'red' : ''"
+                [ngClass]="{'invalid-touched': code.invalid && code.touched}">
+
+                <input [formControl]="name" 
+                type="text" 
+                name="name" 
+                id="name" 
+                [placeholder]="name.invalid && name.touched ? 'Nome inválido' : 'Nome do produto'"
+                [style.border-color]="name.invalid && name.touched ? 'red' : ''"
+                [ngClass]="{'invalid-touched': name.invalid && name.touched}">
+
+                <input [formControl]="type_stock" 
+                type="number" 
+                name="type_stock" 
+                id="type_stock" 
+                [placeholder]="type_stock.invalid && type_stock.touched ? 'Est. inv' : 'Est'"
+                [style.border-color]="type_stock.invalid && type_stock.touched ? 'red' : ''"
+                [ngClass]="{'invalid-touched': type_stock.invalid && type_stock.touched}">
+
+                <input [formControl]="quantity" 
+                type="number" 
+                name="quantity" 
+                id="quantity" 
+                [placeholder]="quantity.invalid && quantity.touched ? 'Quant. inv' : 'Quant.'"
+                [style.border-color]="quantity.invalid && quantity.touched ? 'red' : ''"
+                [ngClass]="{'invalid-touched': quantity.invalid && quantity.touched}">
+                
+                <input [formControl]="accumulate" 
+                type="text" 
+                name="math" 
+                id="math" 
+                [placeholder]="accumulate.invalid && accumulate.touched ? 'Est. inv' : 'Est'"
+                [style.border-color]="accumulate.invalid && accumulate.touched ? 'red' : ''"
+                [ngClass]="{'invalid-touched': accumulate.invalid && accumulate.touched}">
+
+            </div>
+            <div class="botao">
+                <button type="submit">Auditar Estoque</button>
+            </div>
+            <div class="relatorio">
+                <div class="titulos">
+                    <h4>Código interno</h4>
+                    <h4>Nome do produto</h4>
+                    <h4>Código do estoque</h4>
+                    <h4>Quantidade</h4>
+                </div>
+                <div class="relatorio1">
+                    <h4 class="item-1"></h4>
+                    <h4 class="item-2"></h4>
+                    <h4 class="item-3"></h4>
+                    <h4 class="item-4"></h4>
+                </div>
+                <div class="relatorio1">
+                    <h4 class="item-1"></h4>
+                    <h4 class="item-2"></h4>
+                    <h4 class="item-3"></h4>
+                    <h4 class="item-4"></h4>
+                </div>
+                <div class="relatorio1">
+                    <h4 class="item-1"></h4>
+                    <h4 class="item-2"></h4>
+                    <h4 class="item-3"></h4>
+                    <h4 class="item-4"></h4>
+                </div>
+                <div class="relatorio1">
+                    <h4 class="item-1"></h4>
+                    <h4 class="item-2"></h4>
+                    <h4 class="item-3"></h4>
+                    <h4 class="item-4"></h4>
+                </div>
+                <div class="relatorio1">
+                    <h4 class="item-1"></h4>
+                    <h4 class="item-2"></h4>
+                    <h4 class="item-3"></h4>
+                    <h4 class="item-4"></h4>
+                </div>
+            </div>
+        </div>
+    </form>
+</main>

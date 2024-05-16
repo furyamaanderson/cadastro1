@@ -1,0 +1,29 @@
+<div id="conteudo">
+   <div class="container-aside">
+      <!-- IF para tornar conteúdo visível -->
+      <!-- Conteúdo em forma de lista -->
+      <aside *ngIf="conteudoVisivel" class="aside">
+         <ul>
+            <li [routerLink]="'/cadastro'" class="cadastro"><img src="../../../assets/cadas.png">Cadastro</li>
+            <li [routerLink]="'/auditar'" class="auditar"><img src="../../../assets/ar.png">Auditar</li>
+            <li [routerLink]="'/visualizar'" class="visualizar"><img src="../../../assets/lupa.png">Visualizar</li>
+         </ul>
+      </aside>
+      <!-- Conteúdo em forma de lista traída -->
+      <!-- If para tornar conteúdo visível -->
+      <aside *ngIf="conteudoVisivel2" class="aside-retraido">
+         <ul>
+            <li [routerLink]="'/cadastro'"> 
+               <img src="../../../assets/cadas.png">
+            </li>
+            <li [routerLink]="'/auditar'"> 
+               <img src="../../../assets/ar.png">
+            </li>
+            <li [routerLink]="'/visualizar'"> 
+               <img src="../../../assets/lupa.png">
+            </li>
+         </ul>
+      </aside>
+      <button (click)="trocarConteudo()">></button>
+   </div>
+</div>

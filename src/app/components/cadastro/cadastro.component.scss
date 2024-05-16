@@ -1,0 +1,321 @@
+// Container
+main {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    top:10vh;
+    background-color: white;
+}
+
+// h2 geral
+h2{
+    position: relative;
+    top: 5px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+    text-align: center;
+    text-shadow: 0 0 1px black;
+    font-size: 20px;   
+}
+
+// formulário
+form {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 4.8vw;
+    justify-content: space-around;
+    width: 90%;
+    height: 80vh;
+    box-shadow: 0px 0px 7px 1px grey;
+}
+
+//Estilo geral Inputs
+input[type='text']{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+}
+
+//estilo geral select
+select {
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid grey;
+    width: 200px; /* Ajuste conforme necessário */
+    cursor: pointer;
+    background-color: white;
+    color: rgb(23, 23, 28);
+}
+
+//Posicionamento labels
+.principal1,
+.agrupamento1,
+.preco1,
+.estoque1 {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    width: 95%;
+    height: 4vh;
+    left: 30px;
+    align-items: center;
+    gap: 15px;
+    top:20px;
+}
+
+//Posicionamento inputs
+.principal,
+.agrupamento,
+.preco,
+.estoque {
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    width: 95%;
+    left: 30px;
+    height: 7vh;
+    align-items: center;
+    gap:15px;
+}
+//posicionamento container de cálculo automático 
+.faturamento{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 10vw;
+    height: 10vh;
+}
+
+//h2 cálculo automático
+.faturamento h2{
+    background-color: transparent;
+    background-color: rgba(209,209,209,1);
+    color: black;
+    border: 3px solid black;
+    padding: 10px;
+    border-radius: 5px;
+    
+}
+//Posicionamento das labels 
+
+.code{
+    text-align: center;
+    flex: 2;
+}
+.name{
+    text-align: center;
+    flex: 4;
+}
+.internal_code{  
+    text-align: center;
+    flex: 2;
+}
+
+.departament{
+    text-align: center;
+    flex: 2;
+}
+
+.group{
+    text-align: center;
+    flex: 2;
+}
+
+.brand{
+    text-align: center;
+    flex: 2;
+}
+
+.subgroup{
+    text-align: center;
+    flex: 2;
+}
+
+.cost_price{
+    text-align: center;
+    flex: 2;
+}
+
+.wholesale_price{
+    text-align: center;
+    flex: 2;
+}
+
+.retail_price{
+    text-align: center;
+    flex: 2;
+}
+
+.fat1{
+    display: flex;
+    text-align: center;
+    flex: 1;
+    position: relative;
+    left: 30px;
+}
+
+.fat2{
+    text-align: center;
+    flex: 1;
+}
+
+.type_stock{
+    text-align: center;
+    flex: 2;
+}
+
+.available_stock{
+    text-align: center;
+    flex: 2;
+}
+
+.maximum_stock{
+    text-align: center;
+    flex: 2;
+}
+
+.minimum_stock{
+    text-align: center;
+    flex: 2;
+}
+
+//estilo geral dos forms
+#code,
+#internal_code,
+#name,
+#brand,
+#group,
+#subgroup,
+#cost_price,
+#wholesale_price,
+#retail_price,
+#available_stock,
+#minimum_stock,
+#maximum_stock,
+#departament,
+#type_stock {
+    width: 18vw;
+    height: 5vh;
+    border-radius: 3px;
+    border: 1px solid grey;
+    box-shadow: 0 0 3px grey;
+    
+}
+// Flex grow dos inputs
+#code {
+    flex-grow: 2;
+    /* Adicione estilos específicos para #code aqui se necessário */
+}
+
+#internal_code{
+    flex-grow: 2;
+    /* Adicione estilos específicos para #internal_code aqui se necessário */
+}
+
+#name{
+    flex-grow: 10;
+    /* Adicione estilos específicos para #name aqui se necessário */
+}
+
+#brand{
+    flex-grow: 1;
+    /* Adicione estilos específicos para #brand aqui se necessário */
+}
+
+#group{
+    flex-grow: 1;
+    /* Adicione estilos específicos para #group aqui se necessário */
+}
+
+#subgroup{
+    flex-grow: 1;
+    /* Adicione estilos específicos para #subgroup aqui se necessário */
+}
+
+#cost_price{
+    flex-grow: 1;
+    /* Adicione estilos específicos para #cost_price aqui se necessário */
+}
+
+#wholesale_price{
+    flex-grow: 1;
+    /* Adicione estilos específicos para #wholesale_price aqui se necessário */
+}
+
+#retail_price{
+    flex-grow: 1;
+    /* Adicione estilos específicos para #retail_price aqui se necessário */
+}
+
+#available_stock{
+    flex-grow: 1;
+    /* Adicione estilos específicos para #available_stock aqui se necessário */
+}
+
+#minimum_stock{
+    flex-grow: 1;
+    /* Adicione estilos específicos para #minimum_stock aqui se necessário */
+}
+
+#maximum_stock{
+    flex-grow: 1;
+    /* Adicione estilos específicos para #maximum_stock aqui se necessário */
+}
+
+#departament{
+    flex-grow: 1;
+    /* Adicione estilos específicos para #departament aqui se necessário */
+}
+
+#type_stock {
+    flex-grow: 1;
+    /* Adicione estilos específicos para #type_stock aqui se necessário */
+}
+
+
+//Botão
+.botao {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    height: 5vh;
+}
+
+.botao button {
+    margin-right: 15vh;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(23, 23, 28);
+    transition: all 0.5s ease;
+    cursor: pointer;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+}
+
+.botao button:hover {
+    color: black;
+    background-color: white;
+    transform: scale(1.1);
+    box-shadow: 0 0 1px rgb(23, 23, 28),
+                0 0 7px rgb(23, 23, 28);
+}
+
+
+
+// validação
+
+/* CSS */
+input::placeholder {
+    color: black; /* Cor padrão do placeholder */
+}
+
+input.invalid-touched::placeholder {
+    color: red; /* Cor do placeholder quando inválido e tocado */
+}

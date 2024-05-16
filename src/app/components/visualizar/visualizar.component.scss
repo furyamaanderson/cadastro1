@@ -1,0 +1,111 @@
+main {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    top:10vh;
+    background-color: white;
+    
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 4.8vw;
+    justify-content: space-around;
+    width: 90%;
+    height: 80vh;
+    box-shadow: 0px 0px 7px 1px grey;
+}
+
+
+.sub-nav{
+    position: relative;
+    top: 10px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow:0 1px 1px 0px black;
+  
+    
+}
+
+h2{
+    position: relative;
+    top:7px;
+    font-size: 15px;
+    text-shadow: 0 0 1px white,
+    0 0 7px white;
+    color: black;
+    font-family: monospace;
+}
+
+
+.container{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:15px;
+}
+
+.titulo {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 2;
+    height: 100%;
+}
+
+.pesquisa{
+    flex-grow: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.aba{
+    display: flex;
+    flex-grow: 2;
+    gap:15px;
+    
+}
+
+img{
+    height: 5vh;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 5px;
+    background-color: black;
+    transition: all 0.5s ease;
+    
+}
+
+input[type='text']{
+    border-radius: 5px;
+    width: 20vw;
+    height: 3vh;
+}
+
+h3{
+    position: relative;
+    top:9px;
+    font-size: 15px;
+    text-shadow: 0 0 1px black;
+    color: black;
+    font-family: monospace;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+
+h3:hover{ 
+    transform: scale(1.1);
+}
+
+img:hover{
+    transform:scale(1.1)
+}
